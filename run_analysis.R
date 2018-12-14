@@ -1,21 +1,22 @@
 ## 1. Merges the training and the test sets to create one data set
-# read the train data set
+
+# Read the train data set
 x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("./UCI HAR Dataset/train/Y_train.txt")
 subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 
-# read the test data
+# Read the test data
 x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 y_test <- read.table("./UCI HAR Dataset/test/Y_test.txt")
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 
-# read data description
+# Read the data description
 var_name <- read.table("./UCI HAR Dataset/features.txt")
 
-# read activity labels
+# Read the activity labels
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 
-# merge training and test set
+# Merge training and test set
 x_all <- rbind(x_train, x_test)
 y_all <- rbind(y_train, y_test)
 subject_all <- rbind(subject_train, subject_test)
@@ -49,6 +50,7 @@ colnames(x_all) <- var_name[selected_var[, 1], 2]
 ## with the average of each variable for each activity 
 ## and each subject.
 
+## load dplyr package
 library(dplyr)
 
 colnames(subject_all) <- "subject"
