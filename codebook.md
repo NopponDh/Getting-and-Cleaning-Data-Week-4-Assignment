@@ -1,9 +1,9 @@
-### The variables in this tidy data set
+# The variables in this tidy data set
 
 Tidy data contains 180 rows and 68 columns. 
 Each row has averaged variables for each subject and each activity.
 
-Activity column has 6 types of activities:
+## Activity column has 6 types of activities:
 
 1. WALKING
 2. WALKING_UPSTAIRS
@@ -12,7 +12,7 @@ Activity column has 6 types of activities:
 5. STANDING
 6. LAYING
 
-### The tidy data contains 6 rows (averaged based on activity) and 68 columns (66 variables and activity labels).
+## The tidy data contains 6 rows (averaged based on activity) and 68 columns (66 variables and activity labels).
 
 1. "activitylabel"
 2. "subject"
